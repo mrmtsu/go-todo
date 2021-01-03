@@ -2,6 +2,7 @@ package config
 
 import (
 	"log"
+	"udemy-go/utils"
 
 	"gopkg.in/ini.v1"
 )
@@ -19,6 +20,7 @@ var Config ConfigList
 
 func init() {
 	LoadConfig()
+	utils.LoggingSettings(Config.LogFile)
 }
 
 // LoadConfig ...
